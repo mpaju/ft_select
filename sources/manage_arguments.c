@@ -1,6 +1,25 @@
 #include "ft_select.h"
 
 /*
+**	reset position numbers for arglist
+*/
+
+void	reset_positions(t_env *e)
+{
+	t_args	*curr;
+	int		pos;
+
+	pos = 1;
+	curr = e->args;
+	while (curr)
+	{
+		curr->pos = pos;
+		pos++;
+		curr = curr->next;
+	}
+}
+
+/*
 **	searches for the current argument and deletes it while assigning active
 **	status to the next argument
 */

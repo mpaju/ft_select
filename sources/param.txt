@@ -1,0 +1,47 @@
+some params:
+
+`ti'
+String to initialize terminal for random cursor motion.
+
+`te'
+String to return terminal to settings for sequential output.
+
+`vi'
+String to make the cursor invisible.
+
+`ve'
+String to return the cursor to normal.
+
+`cm'
+String to position the cursor at line l, column c.
+
+`ce'
+String to clear from the cursor to the end of the line.
+
+`md'
+String to enter double-bright mode.
+
+`mh'
+String to enter half-bright mode.
+
+`mr'
+String to enter reverse-video mode.
+
+`me'
+String to turn off all appearance modes
+
+`us'
+String to turn on underline mode
+
+`ue'
+String to turn off underline mode
+
+`so'
+String to enter standout mode.
+
+`se'
+String to leave standout mode.
+
+`rs'
+String to reset the terminal from any strange modes.
+

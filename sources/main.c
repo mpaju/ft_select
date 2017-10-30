@@ -23,7 +23,7 @@ static void		get_arg_list(t_env *e, char **av)
 		(*curr)->name = ft_strdup(*av);
 		(*curr)->pos = pos;
 		(*curr)->highlight = 0;
-		(*curr)->active = (pos == 1) ? 1 : 0;
+		(*curr)->active = (pos == 3) ? 1 : 0;
 		(*curr)->next = NULL;
 		curr = &(*curr)->next;
 		av++;

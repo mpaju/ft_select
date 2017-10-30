@@ -6,7 +6,7 @@
 /*   By: mpaju <mpaju@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 14:15:51 by mpaju             #+#    #+#             */
-/*   Updated: 2017/10/30 16:14:32 by mpaju            ###   ########.fr       */
+/*   Updated: 2017/10/30 16:54:04 by mpaju            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	check_signals(void);
 void	delete_active(t_env *e);
 void	display(t_env *e);
 void	get_input(t_env *e);
+void	reset_positions(t_env *e);
 
 void	tc_clear_screen(int fd);
 void	tc_underline_mode_on(int fd);

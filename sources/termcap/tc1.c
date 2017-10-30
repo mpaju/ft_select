@@ -26,3 +26,5 @@ void	tc_random_cursor_pos(int fd)
 {
 	ft_putstr_fd(tgetstr("ti", NULL), 2);
 }
+
+		// ft_putstr_fd(tgetstr("me", NULL), 2);
