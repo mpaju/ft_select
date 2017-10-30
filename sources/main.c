@@ -1,0 +1,38 @@
+#include "ft_select.h"
+
+static void	check_tty(void)
+{
+	if (!isatty(STDIN_FILENO))
+	{
+		ft_putendl_fd("ft_select: Error: Not a terminal", 2);
+		exit(1);
+	}
+}
+
+static t_env	*init_env(t_env *e)
+{
+	struct termios	*newt;
+
+	if (!(e = (t_env *)ft_memalloc(sizeof(t_env))))
+		exit(1);
+	change_term_mode(0);
+	return (e);
+}
+
+int main(int ac, char **av)
+{
+	t_env 	*e;
+	int 	tmp;
+
+	e = NULL;
+	// check_args();
+	check_tty();
+	e = init_env(e);
+	check_signals();
+	display(e);
+	get_input(e);
+
+	while (1)
+		;
+	return 0;
+}
