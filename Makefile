@@ -6,7 +6,7 @@
 #    By: mpaju <mpaju@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/17 17:18:15 by mpaju             #+#    #+#              #
-#    Updated: 2017/10/30 11:43:34 by mpaju            ###   ########.fr        #
+#    Updated: 2017/10/30 16:03:01 by mpaju            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ FILES		=	main.c \
 				change_term_mode.c \
 				get_input.c \
 				display.c \
+				termcap/tc1.c \
+				manage_arguments.c
 
 SRCS		=	$(addprefix $(SRC_DIR)/, $(FILES))
 

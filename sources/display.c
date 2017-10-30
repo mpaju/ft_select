@@ -3,7 +3,7 @@
 // clear_screen();
 // refresh_screen();
 
-static void			set_window_size(t_env *e)
+static void			get_window_size(t_env *e)
 {
 	struct winsize	window;
 
@@ -14,11 +14,6 @@ static void			set_window_size(t_env *e)
 
 void	display(t_env *e)
 {
-	set_window_size(e);
-	ft_putstr_fd(tgetstr("ti", NULL), 2);
-	ft_putstr_fd(tgetstr("cl", NULL), 2);
-	printf("winx: %d, winy: %d\n", e->width, e->height);
-	printf("screenheight: %d\n", tgetnum("li"));
-	ft_putstr_fd(tgetstr("ti", NULL), 2);
+	delete_active(e);
 	return ;
 }
