@@ -11,11 +11,17 @@ static void	check_tty(void)
 
 static t_env	*init_env(t_env *e)
 {
-	struct termios	*newt;
+	char	*termname;
 
 	if (!(e = (t_env *)ft_memalloc(sizeof(t_env))))
 		exit(1);
 	change_term_mode(0);
+	termname = getenv("TERM");
+	if ((tgetent(NULL, termname) <= 0))
+	{
+		ft_putendl_fd("ft_select : tgetent : Error accessing the data base", 2);
+		exit(1);
+	}
 	return (e);
 }
 
