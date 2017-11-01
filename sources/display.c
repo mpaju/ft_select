@@ -32,7 +32,6 @@ void	print_args(t_env *e)
 
 void	display(t_env *e)
 {
-	delete_active(e);
 	tc_clear_screen(2);
 	print_args(e);
 	return ;
