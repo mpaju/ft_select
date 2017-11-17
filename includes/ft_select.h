@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_select.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpaju <mpaju@student.42.fr>                +#+  +:+       +#+        */
+/*   By: valdisemacpro <valdisemacpro@student.42.fr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 14:15:51 by mpaju             #+#    #+#             */
-/*   Updated: 2017/10/30 16:54:04 by mpaju            ###   ########.fr       */
+/*   Updated: 2017/11/17 21:52:03 by valdisemacpro    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,11 @@ typedef struct		s_env
 {
 	int 			width;
 	int 			height;
+	int				maxlen;
 	struct s_args	*args;
 }					t_env;
 
+int		calculate_maxlen(t_args *args);
 void	change_term_mode(int restore);
 void	check_signals(void);
 void	delete_active(t_env *e);

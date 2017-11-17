@@ -19,10 +19,10 @@ String to position the cursor at line l, column c.
 String to clear from the cursor to the end of the line.
 
 `md'
-String to enter double-bright mode.
+String to enter double-bright mode. (bold?)
 
 `mh'
-String to enter half-bright mode.
+String to enter half-bright mode. (italic?)
 
 `mr'
 String to enter reverse-video mode.

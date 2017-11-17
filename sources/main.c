@@ -32,6 +32,20 @@ static void		get_arg_list(t_env *e, char **av)
 }
 
 
+int				calculate_maxlen(t_args *args)
+{
+	int	maxlen;
+
+	maxlen = 0;
+	while (args)
+	{
+		if (maxlen < ft_strlen(args->name))
+			maxlen = ft_strlen(args->name);
+		args = args->next;
+	}
+	return (maxlen);
+}
+
 static t_env	*init_env(t_env *e, char **av)
 {
 	char	*termname;
@@ -46,6 +60,7 @@ static t_env	*init_env(t_env *e, char **av)
 		exit(1);
 	}
 	get_arg_list(e, &av[1]);
+	e->maxlen = calculate_maxlen(e->args);
 	return (e);
 }
 

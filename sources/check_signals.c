@@ -10,7 +10,16 @@ void	interrupt_signal(int num)
 	exit(1);
 }
 
+static void	screen_size_test(int num)
+{
+	struct winsize	window;
+
+	ioctl(0, TIOCGWINSZ, &window);
+	printf("new screen size col: %d, row: %d\n", window.ws_col, window.ws_row);
+}
+
 void	check_signals(void)
 {
 	signal(SIGINT, interrupt_signal);
+	signal(SIGWINCH, screen_size_test);
 }
